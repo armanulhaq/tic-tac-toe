@@ -11,6 +11,7 @@ let winning_patterns = [
     [2,4,6]
 ]
 let gameStatus = document.getElementById("game-status")
+let rematch = document.getElementById("reset")
 
 boxes.forEach(box => {
     box.addEventListener("click", ()=>{
@@ -32,11 +33,14 @@ const checkWinner = () => {
         let pos2 = boxes[pattern[1]].innerText
         let pos3 = boxes[pattern[2]].innerText
         if(pos1!='' && pos2!='' && pos3!='') {
-
             if(pos1 === pos2 && pos2=== pos3) {
-                console.log("winner")
-                gameStatus.innerHTML = "Winner"
+                gameStatus.innerHTML = `"${pos1}" is the winner`
             }
         }
     }
 }
+
+
+rematch.addEventListener("click", ()=> {
+    location.reload();
+})
