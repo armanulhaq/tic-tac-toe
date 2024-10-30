@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
@@ -7,10 +9,13 @@
 html, body {
 	width: 100%;
 	height: 100%;
+    font-family: "Nunito", sans-serif;
     background-color: #fca311;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 50px
 }
 
 #game-container {
@@ -21,6 +26,8 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-radius: 10px;
+    border: none
 }
 
 .box {
@@ -30,4 +37,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #390099;
+    font-size: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0.4rem rgb(0, 0, 0, 0.3);
 }
